@@ -26,7 +26,9 @@ public interface IAccount {
   boolean withdraw(double amount);
 
 
-  //This method returns the current account balance in US dollars.
+  /**
+   * This method returns the current balance of the account.
+   */
   double getBalance();
 
   /**
