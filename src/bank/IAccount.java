@@ -27,7 +27,8 @@ public interface IAccount {
 
 
   /**
-   * This method returns the current balance of the account.
+   * Returns the current balance of the account.
+   * @return returns the current balance of the account
    */
   double getBalance();
 
