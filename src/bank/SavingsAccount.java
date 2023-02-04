@@ -38,7 +38,7 @@ public class SavingsAccount extends AbstractAccount {
    * If the counter exceeds 6, the transaction penalty fee will be added.
    * @param amount represents the amount withdrawn from the account
    * @return boolean true if withdrawal is successful, otherwise, returns
-   * boolean false
+   *         boolean false
    */
   @Override
   public boolean withdraw(double amount) {
@@ -63,7 +63,7 @@ public class SavingsAccount extends AbstractAccount {
   @Override
   public void performMonthlyMaintenance() {
     //if (this.numOfWithdrawals > 6) {
-      //this.fees = TRANSACTION_PENALTY;
+    //this.fees = TRANSACTION_PENALTY;
     //}
     //System.out.println(this.fees);
     this.balance = this.balance - this.fees;
