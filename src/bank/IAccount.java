@@ -27,7 +27,7 @@ public interface IAccount {
 
   /**
    * This method returns the current account balance in US dollars.
-   * @return the current account balance.
+   * @return the current account balance
    */
   double getBalance();
 
