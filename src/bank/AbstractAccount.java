@@ -35,7 +35,7 @@ public abstract class AbstractAccount implements IAccount {
    * IllegalArgumentException will be thrown.
    * @param amount represents the amount deposited into the account.
    * @throws IllegalArgumentException if the desired amount to be deposited
-   * into the account is less than $0.01.
+   *         into the account is less than $0.01.
    */
   public void deposit(double amount) throws IllegalArgumentException {
     double minimum = 0.00;
@@ -52,7 +52,8 @@ public abstract class AbstractAccount implements IAccount {
    * $0.01 and/or the amount is greater than the current account balance.
    * @param amount represents the amount withdrawn from the account
    * @return boolean true if desired amount to be withdrawn is valid,
-   * returns boolean false, if desired amount to be withdrawn is invalid.
+   *         returns boolean false, if desired amount to be withdrawn
+   *         is invalid.
    */
   public boolean withdraw(double amount) {
     if ((amount > this.balance) || (amount < MINIMUM)) {

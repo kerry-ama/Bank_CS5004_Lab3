@@ -1,11 +1,11 @@
-import bank.CheckingAccount;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+
+import bank.CheckingAccount;
+import org.junit.Before;
+import org.junit.Test;
+
 
 /**
  * This class tests the methods of the 'CheckingAccount' class.
@@ -14,7 +14,6 @@ public class TestCheckingAccount {
   private CheckingAccount Kwame;
   private CheckingAccount Kofi;
   private CheckingAccount John;
-
 
   /**
    * Creates Checking Account object instances.
@@ -94,7 +93,5 @@ public class TestCheckingAccount {
     assertEquals("$10000.00", Kofi.toString());
     assertEquals("$0.02", John.toString());
   }
-
-
 
 }

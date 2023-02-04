@@ -5,7 +5,6 @@ package bank;
  * operations mandated by the IAccount interface.
  */
 public class CheckingAccount extends AbstractAccount {
-  //private double fees;
   private static final double MIN_BALANCE = 100.00;
   private static final double MAINTENANCE_FEE = 5.00;
 
