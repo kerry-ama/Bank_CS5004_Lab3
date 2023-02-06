@@ -38,6 +38,4 @@ public class CheckingAccount extends AbstractAccount {
   }
 
 
-
-
 }

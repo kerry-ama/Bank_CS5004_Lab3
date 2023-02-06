@@ -11,6 +11,7 @@ package bank;
 public class SavingsAccount extends AbstractAccount {
   private int numOfWithdrawals;
   private static final double TRANSACTION_PENALTY = 14.00;
+  private static final int MAXIMUM_WITHDRAWALS = 6;
 
   /**
    * Constructs a SavingsAccount object by utilizing the AbstractAccount
@@ -23,7 +24,7 @@ public class SavingsAccount extends AbstractAccount {
   public SavingsAccount(double balance) throws IllegalArgumentException {
     super(balance);//ASK TA if use of super is correct
     this.numOfWithdrawals = 0;
-    if (this.numOfWithdrawals > 6) {
+    if (this.numOfWithdrawals > MAXIMUM_WITHDRAWALS) {
       this.fees = TRANSACTION_PENALTY;
     }
 
@@ -46,9 +47,7 @@ public class SavingsAccount extends AbstractAccount {
       return false;
     }
     this.numOfWithdrawals = this.numOfWithdrawals + 1;
-    System.out.println(numOfWithdrawals);
-    if (this.numOfWithdrawals > 6) {
-      //this.fees += TRANSACTION_PENALTY;
+    if (this.numOfWithdrawals > MAXIMUM_WITHDRAWALS) {
       this.fees = TRANSACTION_PENALTY;
     }
     this.balance = this.balance - amount;
@@ -62,10 +61,9 @@ public class SavingsAccount extends AbstractAccount {
    */
   @Override
   public void performMonthlyMaintenance() {
-    //if (this.numOfWithdrawals > 6) {
-    //this.fees = TRANSACTION_PENALTY;
-    //}
-    //System.out.println(this.fees);
+    if (this.numOfWithdrawals > MAXIMUM_WITHDRAWALS) {
+      this.fees = TRANSACTION_PENALTY;
+    }
     this.balance = this.balance - this.fees;
     this.numOfWithdrawals = 0;
     this.fees = 0;

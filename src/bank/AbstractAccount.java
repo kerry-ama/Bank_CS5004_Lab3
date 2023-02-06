@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
  */
 public abstract class AbstractAccount implements IAccount {
   protected double balance;
-  protected double fees; //Ask TA if needs to be in construct
+  protected double fees;
   protected static final double MINIMUM = 0.01;
 
   /**
@@ -62,8 +62,6 @@ public abstract class AbstractAccount implements IAccount {
     this.balance = this.balance - amount;
     return true;
   }
-  //ASK TA when to use protected vs private vs public vs default
-  //access modifiers
 
   /**
    * Returns the current balance in the account object in US dollars.
